@@ -7,3 +7,9 @@ pipenv install django=2.1
 django-admin startproject vidly . -- create init project
 
 python3 manage.py startapp movies -- create another app with django project
+
+python3 manage.py makemigrations -- for makemigrations - view
+
+python3 manage.py migrate  -- migrate now
+
+python3 manage.py sqlmigrate movies 0001 -- view query for migration
