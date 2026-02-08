@@ -4,6 +4,8 @@ pipenv install django=2.1
 
  pipenv shell # activate env
 
+ python3 manage.py runserver
+
 django-admin startproject vidly . -- create init project
 
 python3 manage.py startapp movies -- create another app with django project

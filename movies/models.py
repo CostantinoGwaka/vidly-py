@@ -7,6 +7,9 @@ from django.utils import timezone  # type: ignore
 class Genre(models.Model):
     name = models.CharField(max_length=255)
 
+    def __str__(self):
+        return self.name
+
 
 class Movies(models.Model):
     title = models.CharField(max_length=255)
