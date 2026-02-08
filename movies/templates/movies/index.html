@@ -1,5 +1,6 @@
-<h1>Movie App</h1>
-<table class="table">
+{% extends "base.html" %} {% block content %}
+
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Title</th>
@@ -11,7 +12,12 @@
   <tbody>
     {% for movie in movies %}
     <tr>
-      <td>{{ movie.title}}</td>
+      {% comment %}
+      <a href="/movies/{{ movie.id }}"> {{ movie.title}} </a>
+      {% endcomment %}
+      <td>
+        <a href="{% url 'movies_detail' movie.id %}"> {{ movie.title}} </a>
+      </td>
       <td>{{ movie.genre}}</td>
       <td>{{ movie.number_in_stock}}</td>
       <td>{{ movie.daily_rate}}</td>
@@ -19,3 +25,4 @@
     {% endfor %}
   </tbody>
 </table>
+{% endblock %}

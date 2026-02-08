@@ -6,5 +6,6 @@ from . import views
 
 # map view to url
 urlpatterns = [
-    path('', views.index, name='index')
+    path('', views.index, name='movies_index'),
+    path('<int:movie_id>', views.detail, name='movies_detail')
 ]
