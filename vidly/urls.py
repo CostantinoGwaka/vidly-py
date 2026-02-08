@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin  # type: ignore
 from django.urls import path, include  # type: ignore
+from api.models import MovieResources
+
+movie_resource = MovieResources()
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('movies/', include('movies.urls'))
+    path('movies/', include('movies.urls')),
+    path('api/', include(movie_resource.urls)),
 ]
