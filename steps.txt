@@ -15,3 +15,9 @@ python3 manage.py makemigrations -- for makemigrations - view
 python3 manage.py migrate  -- migrate now
 
 python3 manage.py sqlmigrate movies 0001 -- view query for migration
+
+install heroku cli for deploymnet
+
+pipenv install gunicorn
+
+create Procfile
