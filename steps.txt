@@ -21,3 +21,9 @@ install heroku cli for deploymnet
 pipenv install gunicorn
 
 create Procfile
+
+git push heroku master  / git push heroku main
+
+heroku ps:scale web=1
+
+heroku open
